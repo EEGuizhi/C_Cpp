@@ -1,4 +1,4 @@
-// 4109061012 ³¯¬fµ¾
+// 4109061012 EE109A é™³æŸç¿”
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
