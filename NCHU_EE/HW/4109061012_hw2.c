@@ -1,10 +1,10 @@
-// 4109061012 ³¯¬fµ¾ 
+// 4109061012 ï¿½ï¿½ï¿½fï¿½ï¿½ 
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 main() {
-    int tmp, i, j;
+    int tmp, i, j, num = 0;
     int arr[100];
     
     // generate numbers
@@ -17,6 +17,8 @@ main() {
 	for(i=0; i<100; i++) {
     	for(j=0; j<100-j-1; j++) {
     		if(arr[j+1] < arr[j]) {
+				num += 1;
+
     			tmp = arr[j+1];
     			arr[j+1] = arr[j];
     			arr[j] = tmp;
@@ -28,4 +30,5 @@ main() {
 	for(i=0; i<100; i++) {
 		printf("%d ", arr[i]);
 	}
+	printf("Number of comparsions: %d", num);
 }
