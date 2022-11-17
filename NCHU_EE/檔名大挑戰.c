@@ -8,7 +8,7 @@ int main() {
 	// input
 	scanf("%s", &str);
 	
-	// check
+	// check & output
 	flag = 0;
 	for(i = 0; i < 100; i++) {
 		if(str[i] == '.') {

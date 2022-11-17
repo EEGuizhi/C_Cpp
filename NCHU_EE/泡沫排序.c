@@ -1,16 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-main() {
-    int n, N[100], tmp;
+int main() {
+    int n, i, j, N[100], tmp;
     scanf("%d ", &n);
     
-    for(int i=0; i<n; i++) {
+    for(i=0; i<n; i++) {
     	scanf("%d", &N[i]);
 	}
 	
-	for(int i=1; i<n; i++) {
-		for(int j=1; j<n; j++) {
+	for(i=1; i<n; i++) {
+		for(j=1; j<n; j++) {
 			if(N[j] < N[j-1]) {
 				tmp = N[j-1];
 				N[j-1] = N[j];
@@ -19,7 +19,9 @@ main() {
 		}
 	}
 	
-	for(int i=0; i<n; i++) {
+	for(i=0; i<n; i++) {
 		printf("%d ", N[i]);
 	}
+	
+	return 0;
 }

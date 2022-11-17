@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-main() {
-    int n;
+int main() {
+    int n, i;
     unsigned long num[1000], min[2], max[2];
     float ave;
 
@@ -12,7 +12,7 @@ main() {
     max[1] = 1;
 
     scanf("%d", &n);
-    for(int i=0; i<n; i++) {
+    for(i=0; i<n; i++) {
         scanf("%d", &num[i]);
         
         ave += ((float)num[i] / (float)n);
@@ -36,4 +36,6 @@ main() {
 
     printf("%d %d\n", max[1], min[1]);
     printf("%.2f", ave);
+    
+    return 0;
 }

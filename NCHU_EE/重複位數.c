@@ -27,7 +27,7 @@ int check(unsigned int n) {
 	return 0;
 }
 
-main() {
+int main() {
 	unsigned int n;
 	
 	scanf("%d", &n);

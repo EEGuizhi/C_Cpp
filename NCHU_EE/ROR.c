@@ -28,14 +28,16 @@ Output:
 #include <stdlib.h>
 #include <math.h>
 
-main() {
+int main() {
 	unsigned int n, lsb;
-	int times;
+	int i, times;
     
+    // input
     scanf("%x", &n);
     scanf("%d", &times);
 	
-	for(int i=0; i<times; i++) {
+	// calc
+	for(i=0; i<times; i++) {
 		if(n%2 == 1)
 			lsb = 1;
 		else
@@ -46,5 +48,8 @@ main() {
 			n += pow(2, 31); 
 	}
 
+	// output
 	printf("0x%x", n);
+	
+	return 0;
 }
