@@ -3,14 +3,9 @@
 #include <math.h>
 
 void output(unsigned int n) {
-	int i, bit[8];
+	int i;
 	for(i=0; i<8; i++) {
-		bit[i] = n % 2;
-		n /= 2;
-	}
-	
-	for(i=0; i<8; i++) {
-		printf("%d", bit[8-i-1]);
+		printf("%d", n / (unsigned int)pow(2, 8-i-1) % 2);
 	}
 }
 
@@ -22,24 +17,24 @@ int main() {
 	
 	scanf("%x", &n);
 	
-	// ¨ú±o4­Óbytes 
+	// å–å¾—4å€‹bytes 
 	tmp = n;
 	for(i=0; i<4; i++) {
 		arr[i] = tmp & ((unsigned int)pow(2, 8)-1);
 		tmp >>= 8;
 	}
 	
-	// ­pºâ¨C­Óbyte¤¤¤À§O¦³¦h¤Ö1 ­Ó§OÀx¦s
-	min = 9; // ¥Nªí¦³9­Ó1
+	// è¨ˆç®—æ¯å€‹byteä¸­åˆ†åˆ¥æœ‰å¤šå°‘1 å€‹åˆ¥å„²å­˜
+	min = 9; // ä»£è¡¨æœ‰9å€‹1
 	flag = 0;
 	for(i=0; i<4; i++) {
 		
 		tmp = arr[i];
-		count_one[i] = 0; // ªì©lÂk¹s 
+		count_one[i] = 0; // åˆå§‹æ­¸é›¶ 
 		
 		for(j=0; j<8; j++) {
 			if(tmp % 2 == 1) // or " if(tmp & 1 == 1) "
-				count_one[i] += 1; // ¦pªG¥Ø«eªº³Ì§C¦ì¤¸¬°1 ¨º´N¼W¥[¤@¦¸count 
+				count_one[i] += 1; // å¦‚æœç›®å‰çš„æœ€ä½ä½å…ƒç‚º1 é‚£å°±å¢åŠ ä¸€æ¬¡count 
 			tmp >>= 1; // or " tmp /= 2 "
 		}
 		
@@ -52,7 +47,7 @@ int main() {
 		}
 	}
 	
-	if(flag) { // ¦pªG¦³¨â­Ó¥H¤W³£¬O¦³³Ì¤Ö­Ó1 ¨º´N­n¦A¤ñ¼Æ­È¤j¤p
+	if(flag) { // å¦‚æœæœ‰å…©å€‹ä»¥ä¸Šéƒ½æ˜¯æœ‰æœ€å°‘å€‹1 é‚£å°±è¦å†æ¯”æ•¸å€¼å¤§å°
 		max_value = 0;
 		for(i=0; i<4; i++) {
 			if(count_one[i] == min && arr[i] > max_value) {
