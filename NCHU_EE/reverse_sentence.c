@@ -2,39 +2,42 @@
 #include <stdlib.h>
 
 int main() {
-    char str[1000], end_ch = '';
-    int i, j, len = 0;
+    char str[1000][20], tmp, end_ch = 0;
+    int i, j, word;
 
     // input & get str length
-    scanf("%s",&str);
-    while(str[len-1] != 0 && str[len] == 0) {
-        len += 1;
-    }
-
+    word = 0;
+    j = 0;
+    while(1) {
+    	scanf("%c", &tmp);
+    	if(tmp == '\n' || tmp == '\r' || tmp == 0)
+    		break;
+    	else {
+    		if(tmp == ' ') {
+    			word += 1;
+    			j = 0;
+			}
+			else {
+				str[word][j] = tmp;
+				str[word][j+1] = 0;
+				j += 1;
+			}
+		}
+	}
 
     // check last char
-    if(str[len-1]<65 || (str[len-1]>90 && str[len-1]<97) || str[len-1]>122) {
-        end_ch = str[len-1];
-        str[len-1] = 0; //null
-        len -= 1;
+    if(str[word][j-1]<65 || (str[word][j-1]>90 && str[word][j-1]<97) || str[word][j-1]>122) {
+        end_ch = str[word][j-1];
+        str[word][j-1] = 0; //null
     }
 
 
     // output
-    i = len-1;
-    while(i > 0) {
-        if(str[i-1] == ' ' || i == 0) {
-            j = i;
-            while(str[j] != ' ' && str[j] != 0) {
-                printf("%c", str[j]);
-                j += 1;
-            }
-            i -= 1;
-        }
-        else {
-            i -= 1;
-        }
-    }
+    for(i=word; i>=0; i--) {
+    	printf("%s", str[i]);
+    	if(i > 0)
+    		printf(" ");
+	}
     printf("%c", end_ch);
     
     return 0;
