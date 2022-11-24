@@ -14,7 +14,7 @@ main() {
 	}
 
 	// bubble sort
-	for(i=0; i<100; i++) {
+	for(i=1; i<100; i++) {
     	for(j=0; j<100-i; j++) {
 			num += 1;
     		if(arr[j+1] < arr[j]) {
