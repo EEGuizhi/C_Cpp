@@ -92,7 +92,7 @@ int main() {
 	}
 	
 	/*====== Problem (a) ======*/
-	 fn1_ver1(arr, 0, LEN-1);
+	fn1_ver1(arr, 0, LEN-1);
 	// fn1_ver2(arr, 0, LEN-1);
 	
 	

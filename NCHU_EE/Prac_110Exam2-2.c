@@ -1,38 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+# define LEN 100
 int main() {
-	int i, len, words = 0, word_len = 0, max_word = 0;
-	char str[100];
+	int i, words, max_wordlen, flag;
+	char str[LEN][30];
+	int len[LEN];
 	
-	// input
-	len = 0;
-	while(1) {
-		str[len] = getchar();
-		if(str[len] == '\n')
-			break;
-		len += 1;
+	// init
+	for(i=0; i<LEN; i++) {
+		len[i] = 0;
 	}
-	
-	// prevent error
-	str[len] = 0;
-	len += 1;
-	
-	/* =============== Problem (a) =============== */
-	for(i=0; i<len; i++) {
-		if((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
-			word_len += 1;
-		else {
-			if(word_len > 0)
-				words += 1;
 
-			if(word_len > max_word)
-				max_word = word_len;
+	// input
+	flag = 1;
+	for(words=0; flag; words++) {
+		i = 0;
+		while(1) {
+			scanf("%c", &str[words][i]);
 			
-			word_len = 0;
+			if((str[words][i] >= 65 && str[words][i] <= 90) || (str[words][i] >= 97 && str[words][i] <= 122)) {
+				i += 1;
+				len[words] += 1;
+			}
+			else {
+				if(str[words][i] == '\n' || str[words][i] == 0)  // finish input
+					flag = 0;
+				str[words][i] = 0;  // null char
+				if(i == 0)
+					words -= 1;
+				break;
+			}
 		}
 	}
-		
-	printf("\n>> (a) The number of words in the sentence is : %d,\n  The maximal length : %d", words, max_word);
+	
+	/* =============== Problem (a) =============== */
+	max_wordlen = 0;
+	for(i=0; i<words; i++) {
+		if(len[i] > max_wordlen)
+			max_wordlen = len[i];
+	}
+	printf("\n>> (a) The number of words in the sentence is : %d,\n>>     The maximal length : %d", words, max_wordlen);
 	
 }

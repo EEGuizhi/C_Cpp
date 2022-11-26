@@ -5,7 +5,7 @@ int main() {
     char str[1000][20], tmp, end_ch = 0;
     int i, j, word;
 
-    // input & get str length
+    // input & get numbers of words in sentence
     word = 0;
     j = 0;
     while(1) {
