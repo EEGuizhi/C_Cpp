@@ -9,13 +9,13 @@ int main() {
     word = 0;
     j = 0;
     while(1) {
-    	scanf("%c", &tmp);
-    	if(tmp == '\n' || tmp == '\r' || tmp == 0)
-    		break;
-    	else {
-    		if(tmp == ' ') {
-    			word += 1;
-    			j = 0;
+		scanf("%c", &tmp);
+		if(tmp == '\n' || tmp == '\r' || tmp == 0)
+			break;
+		else {
+			if(tmp == ' ') {
+				word += 1;
+				j = 0;
 			}
 			else {
 				str[word][j] = tmp;
@@ -26,7 +26,7 @@ int main() {
 	}
 
     // check last char
-    if(str[word][j-1]<65 || (str[word][j-1]>90 && str[word][j-1]<97) || str[word][j-1]>122) {
+    if(str[word][j-1]<(int)'A' || (str[word][j-1]>(int)'Z' && str[word][j-1]<(int)'a') || str[word][j-1]>(int)'z') {
         end_ch = str[word][j-1];
         str[word][j-1] = 0; //null
     }
@@ -34,9 +34,9 @@ int main() {
 
     // output
     for(i=word; i>=0; i--) {
-    	printf("%s", str[i]);
-    	if(i > 0)
-    		printf(" ");
+		printf("%s", str[i]);
+		if(i > 0)
+			printf(" ");
 	}
     printf("%c", end_ch);
     
