@@ -3,7 +3,7 @@
 
 # define LEN 100
 int main() {
-	int i, words, max_wordlen, flag;
+	int i, j, words, max_wordlen, flag;
 	char str[LEN][30];
 	int len[LEN];
 	
@@ -19,7 +19,7 @@ int main() {
 		while(1) {
 			scanf("%c", &str[words][i]);
 			
-			if((str[words][i] >= 65 && str[words][i] <= 90) || (str[words][i] >= 97 && str[words][i] <= 122)) {
+			if((str[words][i] >= (int)'A' && str[words][i] <= (int)'Z') || (str[words][i] >= (int)'a' && str[words][i] <= (int)'z')) {
 				i += 1;
 				len[words] += 1;
 			}
@@ -34,6 +34,7 @@ int main() {
 		}
 	}
 	
+	
 	/* =============== Problem (a) =============== */
 	max_wordlen = 0;
 	for(i=0; i<words; i++) {
@@ -42,4 +43,21 @@ int main() {
 	}
 	printf("\n>> (a) The number of words in the sentence is : %d,\n>>     The maximal length : %d", words, max_wordlen);
 	
+
+
+	/* =============== Problem (b) =============== */
+	printf("\n\n>> The palindrome words: ");
+	for(i=0; i<words; i++) {
+		flag = 1;
+		for(j=0; j<len[i]/2; j++) {
+			if(str[i][j] != str[i][len[i]-j-1]) {
+				flag = 0;
+				break;
+			}
+		}
+
+		if(flag) {
+			printf("%s ", str[i]);
+		}
+	}
 }
