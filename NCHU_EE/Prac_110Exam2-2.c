@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+// #include <string.h>
 
-int anagram(char str1[], char str2[]) {
-	int i, flag, len1, len2, ch[26] = {0};
-	len1 = strlen(str1);
-	len2 = strlen(str2);
+int anagram(char str1[], char str2[], int len1, int len2) {
+	int i, flag, ch[26] = {0};
+	// int len1, len2;
+	// len1 = strlen(str1);
+	// len2 = strlen(str2);
 
 	if(len1 == len2) {
 		for(i=0; i<len1; i++) {
@@ -29,20 +30,15 @@ int anagram(char str1[], char str2[]) {
 # define LEN 100
 int main() {
 	int i, j, words, max_wordlen, flag;
-	char str[LEN][30];
-	int len[LEN];
-	
-	// init
-	for(i=0; i<LEN; i++) {
-		len[i] = 0;
-	}
+	char str[LEN][30] = {0};
+	int len[LEN] = {0};
 
 	// input
 	flag = 1;
 	for(words=0; flag; words++) {
 		i = 0;
 		while(1) {
-			scanf("%c", &str[words][i]);
+			str[words][i] = getchar();
 			
 			if(str[words][i] == ' ' || str[words][i] == '\n' || str[words][i] == '.' || str[words][i] == '!' || str[words][i] == '?' || str[words][i] == 0) {
 				if(str[words][i] == '\n' || str[words][i] == 0)  // finish input
@@ -71,7 +67,7 @@ int main() {
 
 
 	/* =============== Problem (b) =============== */
-	printf("\n\n>> The palindrome words: ");
+	printf("\n\n>> (b) The palindrome words: \n");
 	for(i=0; i<words; i++) {
 		flag = 1;
 		for(j=0; j<len[i]/2; j++) {
@@ -82,17 +78,17 @@ int main() {
 		}
 
 		if(flag) {
-			printf("%s ", str[i]);
+			printf(">>     %s\n", str[i]);
 		}
 	}
 
 
 	/* =============== Problem (c) =============== */
-	printf("\n\n>> The anagram words: \n");
+	printf("\n>> (c) The anagram words: \n");
 	for(i=0; i<words; i++) {
 		for(j=i+1; j<words; j++) {
-			if(anagram(str[i], str[j])) {
-				printf(">> %s  %s\n", str[i], str[j]);
+			if(anagram(str[i], str[j], len[i], len[j])) {
+				printf(">>     %s  %s\n", str[i], str[j]);
 			}
 		}
 	}
