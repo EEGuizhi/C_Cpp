@@ -3,7 +3,7 @@
 // #include <string.h>
 
 int anagram(char str1[], char str2[], int len1, int len2) {
-	int i, flag, ch[26] = {0};
+	int i, ch[26] = {0};
 	// int len1, len2;
 	// len1 = strlen(str1);
 	// len2 = strlen(str2);
@@ -15,7 +15,6 @@ int anagram(char str1[], char str2[], int len1, int len2) {
 		for(i=0; i<len2; i++) {
 			ch[str2[i]-'a'] -= 1;
 		}
-		flag = 1;
 		for(i=0; i<26; i++) {
 			if(ch[i] != 0)
 				return 0;  // false
