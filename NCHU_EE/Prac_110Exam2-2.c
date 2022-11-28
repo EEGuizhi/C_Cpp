@@ -17,13 +17,12 @@ int anagram(char str1[], char str2[], int len1, int len2) {
 		}
 		for(i=0; i<26; i++) {
 			if(ch[i] != 0)
-				return 0;  // false
+				return 0;  // failed
 		}
-		
-		return 1;
+		return 1;  // success
 	}
 	else
-		return 0;  // false
+		return 0;  // failed
 }
 
 # define LEN 100

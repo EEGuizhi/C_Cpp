@@ -84,7 +84,6 @@ void PrintResult(int arr[], int len, int index, int target) {
 # define TARGET 123
 int main() {
     int arr[LEN], i, flag;
-    
     // generate some numbers
     srand((unsigned) time(NULL));
     for(i=0; i<LEN; i++) {
