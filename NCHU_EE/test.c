@@ -7,6 +7,7 @@
 #define LEN 10
 
 int main() {
+	/*
     int arr[LEN][LEN] = {0};  // fill the entire array with number 0, its same for 1D or 2D or... array
     int i, j, str_len;
     char str[1000];
@@ -36,6 +37,14 @@ int main() {
 		str_len += 1;
 	}
     // printf("\n>> %d", str_len);
+    */
+    
+    int i, arr[100]={0};
+    
+    for(i=0; i<0; i++) {
+    	arr[i] = 1;
+	}
+	printf("i: %d, arr[0]: %d", i, arr[0]);
 
     return 0;
 }
