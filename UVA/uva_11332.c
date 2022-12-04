@@ -1,3 +1,4 @@
+// Title: Summing Digits  , Correct: True
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,17 +15,14 @@ int main() {
     long long unsigned num;
     
     while(1) {
-        // input
         scanf("%lld", &num);
         if(num == 0)
             break;
         
-        // calc
         while(num/10 > 0) {
             num = sum_digits(num);
         }
         
-        // output
         printf("%d\n", num);
     }
 	
