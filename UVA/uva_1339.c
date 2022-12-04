@@ -1,4 +1,4 @@
-// Title: Ancient Cipher  , Correct: unkown
+// Title: Ancient Cipher  , Verdict: Accepted
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -39,43 +39,14 @@ int main() {
         len_or = strlen(origin);
 
         if(len_en != len_or) {
-            // flag = 0;
             printf("NO\n");
         }
         else {
-            // flag = check(engrave, origin, len_en);
             if(check(engrave, origin, len_en))
                 printf("YES\n");
             else
                 printf("NO\n");
-            // end_ch = 'A';
-            // for(i=0; i<len_en; i++) { // find max alphabet
-            //     if(engrave[i] > end_ch) {
-            //         end_ch = engrave[i];
-            //     }
-            // }
-
-            // for(k=end_ch; k<='Z' && flag == 0; k++) {
-            //     for(i=0; i<25; i++) { // 26個英文字母(no 'Z') 最多shift 25次
-            //         if(check(engrave, origin, len_en)) {
-            //             flag = 1;
-            //             break;
-            //         }
-
-            //         for(j=0; j<len_en; j++) { // shift
-            //             engrave[j] += 1;
-            //             if(engrave[j] > k) {
-            //                 engrave[j] -= k - 'A';
-            //             }
-            //         }
-            //     }
-            // }
         }
-
-        // if(flag)
-        //     printf("YES\n");
-        // else
-        //     printf("NO\n");
     }
 
     return 0;

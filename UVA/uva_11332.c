@@ -1,4 +1,4 @@
-// Title: Summing Digits  , Correct: True
+// Title: Summing Digits  ,  Verdict: Accepted
 #include <stdio.h>
 #include <stdlib.h>
 
