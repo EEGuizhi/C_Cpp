@@ -1,4 +1,4 @@
-// Title: Ancient Cipher  , Verdict: Accepted
+// Title: Ancient Cipher, Verdict: Accepted, Run Time: 0.000
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

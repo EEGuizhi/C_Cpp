@@ -1,4 +1,4 @@
-// Title: How old are you?  ,  Verdict: Accepted
+// Title: How old are you?, Verdict: Accepted, Run Time: 0.000
 #include <stdio.h>
 #include <stdlib.h>
 

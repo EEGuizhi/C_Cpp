@@ -1,4 +1,4 @@
-// Title: Summing Digits  ,  Verdict: Accepted
+// Title: Summing Digits, Verdict: Accepted, Run Time: 0.000
 #include <stdio.h>
 #include <stdlib.h>
 
