@@ -11,18 +11,4 @@
 - NCHU EE 大一計算機程式設計
 <br><br>
 
-## Learning：
-- <b>ASCII TABLE</b>：<br>
-    (char) 'A' = (int) 65 <br>
-    (char) 'a' = (int) 97 <br>
-    (char) '0' = (int) 48 <br>
-
-- <b>Data type range</b>：<br>
-    int (32 bits)： +-( 2^(31) - 1 ) <br>
-    unsigned int (32 bits)： 0 ~ ( 2^(32) - 1 ) <br>
-    long long int (64 bits)： +-( 2^(63) -1 ) <br>
-
-- <b>Others</b>：<br>
-    %02d：補0到兩位
-
 ## Have a good day :D
