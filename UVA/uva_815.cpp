@@ -11,7 +11,7 @@ int compare(const void * a, const void * b) {
 }
 
 int main() {
-	int m, n, i, j, R = 0;
+	int m, n, i, R = 0;
 	double elv[30 * 30], water, vol;
 	
 	while(1) {
