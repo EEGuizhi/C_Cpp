@@ -1,3 +1,8 @@
+// Title: Flooded!, Verdict: Accepted, Run Time: 0.010
+
+/*  此題必須用C++函式庫的printf 用C函示庫的printf會在使用%.2f時四捨五入出不同的值 (確認後發現 其實是C++的有誤)
+    以及題目範例解答表示不明確 每輸出一個Region後需要換2行再進行下個Region的輸出。 */
+
 #include <cstdio>
 #include <algorithm>
 
@@ -8,7 +13,6 @@ int compare(const void * a, const void * b) {
 int main() {
 	int m, n, i, j, R = 0;
 	double elv[30 * 30], water, vol;
-	double ans[100][2];
 	
 	while(1) {
 		R += 1;
@@ -28,9 +32,9 @@ int main() {
 		while(water > 0) {
 			i += 1;
 			if(i >= n) {
-				printf("Region %d\n", R);
+				printf("Region %d\n", R);  // outputs
 				printf("Water level is %.2lf meters.\n", elv[i-1] + (water / (double)(n*100)));
-				printf("100.00 percent of the region is under water.\n");
+				printf("100.00 percent of the region is under water.\n\n");
 				break;
 			}
 			else {
@@ -38,10 +42,10 @@ int main() {
 				if(water > vol) {
 					water -= vol;
 				}
-				else {  // outputs
-					printf("Region %d\n", R);
+				else {
+					printf("Region %d\n", R);  // outputs
 					printf("Water level is %.2lf meters.\n", elv[i-1] + (water / (double)(i*100)));
-					printf("%.2lf percent of the region is under water. i: %d, n: %d\n", (double)100 * i / n, i, n);
+					printf("%.2lf percent of the region is under water.\n\n", (double)100 * i / n);
 					break;
 				}
 			}
