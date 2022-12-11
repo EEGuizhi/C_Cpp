@@ -8,6 +8,9 @@ Disscuss:
         (1) N < M+1
         (2) N == M+2  ||  N == 2M+1
 
+        1, 1~M, M:   N > M+1  &&  N <= M+2
+        M, 1~M, M:   N <= 2M+1  &&  N > 2M
+
     2nd win:
         N-(1~M) >= 1  &&  N-(1~M)  <= M  -->  N >= 1+(1~M)  &&  N <= M+(1~M)
         N-(2~2M) >= 2  &&  N-(2~2M)  <= 2M  -->  N >= 2+(2~2M)  &&  N <= 2M+(2~2M)
@@ -15,8 +18,10 @@ Disscuss:
 
         (1) N == M+1
 
-        1, 1~M, M:   N > M+1  &&  N <= M+2
-        M, 1~M, M:   N <= 2M+1  &&  N > 2M
+
+    conclusion: N >= i+(i~i*M) && N <= i*M+(i~i*M)  會是後者勝
+    對手拿最小 ==>   N >= i+(i) && N <= i*M+(i)        ==>    N >= 2*i && N <= i*(M+1)
+    對手拿最大 ==>   N >= i+(i*M) && N <= i*M+(i*M)    ==>    N >= i*(1+M) && N <= i*(2*M)
 */
 
 #include <stdio.h>
