@@ -45,9 +45,9 @@ int main() {
 		else if(cmd == 3) {  // cmd 3.
 			if(con[p1] == '.') {
 				con[p1] = 'X';
-				for(x=p1+1; x<=n && con[x]=='.'; x++)
+				for(x=p1+1; x<n && con[x]=='.'; x++)
 					con[x] = 'X';
-				for(x=p1-1; x>0 && con[x]=='.'; x--)
+				for(x=p1-1; x>=0 && con[x]=='.'; x--)
 					con[x] = 'X';
 			}
 		}
