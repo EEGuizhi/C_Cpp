@@ -10,7 +10,6 @@ void output(unsigned int n) {
 }
 
 
-
 int main() {
 	unsigned int n, arr[4], tmp, max_value;
 	int i, j, count_one[4], min, flag;

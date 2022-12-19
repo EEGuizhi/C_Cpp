@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-// #include <string.h>
 
 int anagram(char str1[], char str2[], int len1, int len2) {
 	int i, ch[26] = {0};
-	// int len1, len2;
-	// len1 = strlen(str1);
-	// len2 = strlen(str2);
 
 	if(len1 == len2) {
 		for(i=0; i<len1; i++) {

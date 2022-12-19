@@ -3,7 +3,7 @@
 
 main() {
     char str[30];
-    int n = 0;
+    int n = 0, i;
     int flag = 1;
     
 	while(1) {
@@ -14,6 +14,6 @@ main() {
     	n += 1;
 	}
 	
-	for(int i=0; i<n; i++)
+	for(i=0; i<n; i++)
 		printf("%c", str[n-1-i]);
 }

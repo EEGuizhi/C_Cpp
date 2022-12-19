@@ -1,4 +1,3 @@
-// by 4109061012
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
