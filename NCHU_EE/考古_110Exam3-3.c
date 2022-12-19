@@ -15,8 +15,10 @@ void read_line(char *s, int n, int *p1) {  // pointer
 		}
 
 		if(flag) {
-			if(*s == '\n')  // end of input
+			if(*s == '\n') {  // end of input
+				*s = 0;  // string end char
 				break;
+			}
 			else if(*s>='a' && *s<='z') {  // lower-case English letter
 				*s = (*s - 'a') + 'A';
 				*p1 += 1;
@@ -24,6 +26,7 @@ void read_line(char *s, int n, int *p1) {  // pointer
 			s += 1;
 		}
 	}
+	*s = 0;  // string end char
 }
 
 int main() {
