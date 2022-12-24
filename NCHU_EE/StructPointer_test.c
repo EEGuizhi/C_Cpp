@@ -18,6 +18,9 @@ int main() {
     itm01.nextPtr = &itm02;
     printf(">> nextPtr of itm01 is: %p\n\n", itm01.nextPtr);  // 0062FDF0
 
+    itm02.num = 100;
+    printf(">> item02.num = %d\n", (*itm01.nextPtr).num);
+
     item *itemPtr;
     itemPtr = &itm01;
     printf(">> new itemPtr: %p\n", itemPtr -> nextPtr);  // 0062FDF0
