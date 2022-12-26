@@ -12,6 +12,7 @@ void read_line(char *s, int n, int *p1) {  // pointer
 		if(flag == 0) {  // initial white space
 			if(*s != ' ')
 				flag = 1;
+			i = 0;
 		}
 
 		if(flag) {

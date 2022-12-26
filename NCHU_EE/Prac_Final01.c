@@ -25,6 +25,7 @@ int merge(char *short_str, char *long_str) {
         short_str++;
         ch_ptr++;
     }
+    *ch_ptr = 0;
 
     return diff;
 }
@@ -76,3 +77,19 @@ int main() {
 
     return 0;
 }
+
+
+
+
+void inv_print(char *str) {
+    char *ptr = str;
+    while(*(ptr+1)) {
+        ptr++;
+    }
+
+    while(ptr >= str) {
+        printf("%c", *ptr);
+        ptr--;
+    }
+}
+
