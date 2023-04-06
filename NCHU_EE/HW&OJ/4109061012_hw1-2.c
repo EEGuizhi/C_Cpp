@@ -1,4 +1,3 @@
-// 4109061012 EE109A 陳柏翔
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
