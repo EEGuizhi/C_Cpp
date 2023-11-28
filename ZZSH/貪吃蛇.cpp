@@ -1,4 +1,3 @@
-// 有BUG 尚未修正
 #include <iostream>
 #include <stdio.h>
 #include <conio.h>
@@ -35,7 +34,7 @@ void gfood()
 	do{
 		restart=0;
 		food[0]=(rand()%29)*2+2;
-		food[1]=(rand()%29)+1;
+		food[1]=(rand()%28)+1;
 		for(int i=0;i<len;i++)
 		{
 			if(Pos[i][0]==food[0]&&Pos[i][1]==food[1])
@@ -72,22 +71,22 @@ void setting()
 		gotoxy(60,i);
 		cout << "��" ;
 	}
-	gotoxy(0,30);
+	cout << endl;
 	for(int i=0;i<=60;i++)
 	{
 		cout << "��" ;
 	}
-	gotoxy(0,0);
-	cout << "��" ;
-	gotoxy(60,0);
-	cout << "��" ;
-	gotoxy(0,30);
-	cout << "��" ;
-	gotoxy(60,30);
-	cout << "��" ;  //�C�L���a����----------------------- 
+//	gotoxy(0,0);
+//	cout << "��" ;
+//	gotoxy(60,0);
+//	cout << "��" ;
+//	gotoxy(0,30);
+//	cout << "��" ;
+//	gotoxy(60,30);
+//	cout << "��" ;  //�C�L���a����----------------------- 
 	
 	gotoxy(20,15);
-	cout << "���USPACE�Ӷ}�l�C��..." ;
+	cout << "Press SPACE.. " ;
 }
 
 void start()
