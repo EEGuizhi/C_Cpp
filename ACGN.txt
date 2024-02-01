@@ -128,7 +128,7 @@ SPY×FAMILY (C)
 斬！赤紅之曈 (A)
 勇者、辭職不幹了 (A)
 AURA ～魔龍院光牙最後的戰鬥～ (A)
-葬送的芙莉蓮 (C)
+葬送的芙莉蓮 (C, A)
 朋友遊戲 (A)
 刀劍神域無星夜的永嘆調 (A)
 龍與虎(虎與龍) (A)
@@ -181,6 +181,8 @@ MoMo - the blood taker (C)
 NANA (A)
 BLUE GIANT 藍色巨星 (A)
 Scavengers Reign (A)
+航海王劇場版：紅髮歌姬 (A)
+龍與雀斑公主 (A)
 
 
 - 待加入(正在看 or 半棄坑)：
